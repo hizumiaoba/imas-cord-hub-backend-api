@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   return res.status(200).json(result);
 }
 
-type exportType = {
+export type exportType = {
   id: string,
   name: string,
   ip: string,
