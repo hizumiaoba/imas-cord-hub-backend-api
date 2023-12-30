@@ -5,9 +5,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const db = client.db('imascordhubServer');
   const collection = db.collection('serverData');
   const searchQuery = {
-    ip: {
-      $regex: req.query.ip as string,
-    },
+    ip: req.query.ip
   };
   const servers = await collection.find(searchQuery).toArray();
   if(servers.length === 0) {
