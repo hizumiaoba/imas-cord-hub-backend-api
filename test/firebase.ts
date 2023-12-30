@@ -1,5 +1,5 @@
 import { FirebaseApp } from "firebase/app";
-import { createAppContainer } from "../internal/firebaseAppFactory";
+import { createAppContainer } from "../api/internal/firebaseAppFactory";
 import { getFirestore, collection, getDocs, Firestore, DocumentData } from "firebase/firestore/lite";
 
 const firebaseApp: FirebaseApp = createAppContainer();
