@@ -6,7 +6,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const db = client.db("imascordhubServer");
   const collection = db.collection("serverData");
   const servers = await collection.find({}).toArray()
-  const result: Array<exportType> = servers.map((server) => {
+  const result: Array<serverExportType> = servers.map((server) => {
     return {
       id: server.id,
       name: server.name,
@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   return res.status(200).json(result);
 }
 
-export type exportType = {
+export type serverExportType = {
   id: string,
   name: string,
   ip: string,
