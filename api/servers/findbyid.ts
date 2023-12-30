@@ -2,11 +2,10 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 import clientPromise from "../../_utils/mongo";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const { id: string } = req.query;
   const client = await clientPromise;
   const db = client.db("imascordhubServer");
   const collection = db.collection("serverData");
-  const exactServer = await collection.findOne({ id: string });
+  const exactServer = await collection.findOne({ id: req.query.id});
   if (!exactServer) return res.status(404).json({ message: "Not Found" });
 
   return res.status(200).json({
