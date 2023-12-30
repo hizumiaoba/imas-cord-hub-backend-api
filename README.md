@@ -1,31 +1,15 @@
-# Node.js Hello World
+# ImasCordHub Backend API
 
-Simple Node.js + Vercel example that returns a "Hello World" response.
+Discord servers, Fansites, All in one.
 
-## How to Use
+This will provide you much information of Discord servers, Fansites for specific idol!
 
-You can choose from one of the following two methods to use this repository:
+This is also powerring [ImasCordHub](https://imas-cord-hub.vercel.app/) service!
 
-### One-Click Deploy
+## API Reference
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+The reference of this API is published at this [link](https://example.com)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/node-hello-world&project-name=node-hello-world&repository-name=node-hello-world)
+If you have any trouble during using this API, Please feel free to send questions at [Our YouTrack](https://imas-cord-hub.youtrack.cloud/newIssue)
 
-### Clone and Deploy
-
-```bash
-git clone https://github.com/vercel/examples/tree/main/solutions/node-hello-world
-```
-
-Install the Vercel CLI:
-
-```bash
-npm i -g vercel
-```
-
-Then run the app at the root of the repository:
-
-```bash
-vercel dev
-```
+Note that you should specify
