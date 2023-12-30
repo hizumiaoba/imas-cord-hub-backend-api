@@ -4,7 +4,7 @@ import clientPromise from "../_utils/mongo";
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const client = await clientPromise;
   const db = client.db("imascordhubServer");
-  const collection = db.collection("fabsiteData");
+  const collection = db.collection("fansiteData");
   const fansites = await collection.find({}).toArray()
   const result: Array<fansiteExportType> = fansites.map((fansite) => {
     return {
