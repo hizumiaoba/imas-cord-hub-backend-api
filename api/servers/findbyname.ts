@@ -15,4 +15,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     message: `The server that matches ${req.query.name} was not found.`,
     hint: "Try with another name, or more non-specific name."
   });
+
+  const result = servers.map(server => {
+    return {
+      id: server.id,
+      name: server.name,
+      ip: server.ip,
+      waifu: server.waifu,
+      description: server.description,
+      invite: server.invite,
+      splash: server.splash
+    }
+  });
+  return res.status(200).json(result);
 }
