@@ -1,31 +1,40 @@
-# Node.js Hello World
+# ImasCordHub Backend API
 
-Simple Node.js + Vercel example that returns a "Hello World" response.
+Discord servers, Fansites, All in one.
 
-## How to Use
+This will provide you much information of Discord servers, Fansites for specific idol!
 
-You can choose from one of the following two methods to use this repository:
+This is also powerring [ImasCordHub](https://imas-cord-hub.vercel.app/) service!
 
-### One-Click Deploy
+## API Reference
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+The reference of this API is published at this [link](https://hizumiaoba.github.io/Personal-pages/about/imascordhub/api-spec.html)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/node-hello-world&project-name=node-hello-world&repository-name=node-hello-world)
+If you have any trouble during using this API, Please feel free to send questions at [Our YouTrack](https://imas-cord-hub.youtrack.cloud/projects/3372a5bf-5918-4217-8153-7986a8b520f5)
 
-### Clone and Deploy
+You can also reference [GitHub Wiki Page](https://github.com/hizumiaoba/imas-cord-hub-backend-api/wiki) to learn more about using this API!
 
-```bash
-git clone https://github.com/vercel/examples/tree/main/solutions/node-hello-world
-```
+## Contribution
 
-Install the Vercel CLI:
+We are always welcome your contribution! Please feel free to send pull requests!
 
-```bash
-npm i -g vercel
-```
+Please make sure that you have read [CONTRIBUTING.md](CONTRIBUTING.md) before creating PR.
 
-Then run the app at the root of the repository:
+## License
 
-```bash
-vercel dev
-```
+This API's source code is licensed under [AGPL-3.0](LICENSE) license.
+
+But, the data provided by this API is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Please be careful!
+
+![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+## Special Thanks
+
+This project is inspired by [Fujiwarahaji.me Song Database](https://fujiwarahaji.me/).
+
+This API uses below platforms to work.
+
+- GitHub - hosting source code and wiki pages
+- [Vercel](https://vercel.com/) - deploying API
+- [YouTrack](https://imas-cord-hub.youtrack.cloud/) - tracking issues, discussions, knowledge bases across the Frontend and Backend projects
+- [upptime](https://hizumiaoba.github.io/imas-cord-hub-health-monitor/) - monitoring API's uptime
