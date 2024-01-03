@@ -8,7 +8,7 @@ This is also powerring [ImasCordHub](https://imas-cord-hub.vercel.app/) service!
 
 ## API Reference
 
-The reference of this API is published at this [link]()
+The reference of this API is published at this [link](https://hizumiaoba.github.io/Personal-pages/about/imascordhub/api-spec.html)
 
 If you have any trouble during using this API, Please feel free to send questions at [Our YouTrack](https://imas-cord-hub.youtrack.cloud/projects/3372a5bf-5918-4217-8153-7986a8b520f5)
 
