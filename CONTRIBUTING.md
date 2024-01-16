@@ -1,4 +1,4 @@
-# Contributing to [Repository Name]
+# Contributing to ImasCordHub Backend API
 
 **Caution**: This `CONTRIBUTING.md` file was written by powering with `GitHUb Copilot` and related product of it. If you have any unconfortable feeling about this file, please feel free to raise the issue or PR for this file. We will continue to improve this file to be more friendly to contributors.
 
