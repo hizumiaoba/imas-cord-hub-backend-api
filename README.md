@@ -24,13 +24,13 @@ Please make sure that you have read [CONTRIBUTING.md](CONTRIBUTING.md) before cr
 
 This API's source code is licensed under [AGPL-3.0](LICENSE) license.
 
-But, the data provided by this API is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Please be careful!
+However, the data provided by this API is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Please be careful!
 
 ![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
 ## Special Thanks
 
-This project is inspired by [Fujiwarahaji.me Song Database](https://fujiwarahaji.me/).
+This project is inspired by [fujiwarahaji.me Song Database](https://fujiwarahaji.me/).
 
 This API uses below platforms to work.
 
