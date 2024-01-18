@@ -25,7 +25,7 @@ const getFunction = async (req: VercelRequest, res: VercelResponse, collection) 
   }
   const result: Array<fansiteExportType> = fansites.map((fansite) => {
     if(fields.length === 0) {
-      return fansite;
+      return fansite as fansiteExportType;
     }
     let fansiteFields: Partial<fansiteExportType> = {};
     fields.forEach((field) => {
