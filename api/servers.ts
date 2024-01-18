@@ -28,7 +28,15 @@ const getFunction = async (req: VercelRequest, res: VercelResponse, collection) 
   }
   const result: Array<serverExportType> = servers.map((server) => {
     if(fields.length === 0) {
-      return server as serverExportType;
+      return {
+        id: server.id,
+        name: server.name,
+        ip: server.ip,
+        waifu: server.waifu,
+        description: server.description,
+        invite: server.invite,
+        splash: server.splash
+      }
     }
     let serverFields: Partial<serverExportType> = {};
     fields.forEach((field) => {
