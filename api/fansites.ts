@@ -18,18 +18,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
 const getFunction = async (req: VercelRequest, res: VercelResponse, collection) => {
   const limit: number = parseInt(req.query.limit as string) || 0;
+  const fields: Array<string> = (req.query.fields as string) ? (req.query.fields as string).split(",") : [];
   let fansites = await collection.find({}).toArray()
   if(limit > 0) {
     fansites = fansites.slice(0, limit);
   }
   const result: Array<fansiteExportType> = fansites.map((fansite) => {
-    return {
-      id: fansite.id,
-      name: fansite.name,
-      waifu: fansite.waifu,
-      description: fansite.description,
-      link: fansite.link,
-    }
+    let fansiteFields: Partial<fansiteExportType> = {};
+    fields.forEach((field) => {
+      if(field in fansite) {
+        fansiteFields[field] = fansite[field];
+      }
+    });
+    return fansiteFields;
   });
   return res.status(200).json(result);
 }
