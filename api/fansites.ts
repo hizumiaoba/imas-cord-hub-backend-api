@@ -17,7 +17,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 }
 
 const getFunction = async (req: VercelRequest, res: VercelResponse, collection) => {
-  const fansites = await collection.find({}).toArray()
+  const limit: number = parseInt(req.query.limit as string) || 0;
+  let fansites = await collection.find({}).toArray()
+  if(limit > 0) {
+    fansites = fansites.slice(0, limit);
+  }
   const result: Array<fansiteExportType> = fansites.map((fansite) => {
     return {
       id: fansite.id,

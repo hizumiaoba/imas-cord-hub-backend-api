@@ -20,7 +20,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 }
 
 const getFunction = async (req: VercelRequest, res: VercelResponse, collection) => {
-  const servers = await collection.find({}).toArray()
+  const limit: number = parseInt(req.query.limit as string) || 0;
+  let servers = await collection.find({}).toArray()
+  if(limit > 0) {
+    servers = servers.slice(0, limit);
+  }
   const result: Array<serverExportType> = servers.map((server) => {
     return {
       id: server.id,
