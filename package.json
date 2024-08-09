@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/mongoose": "^5.11.97",
-    "mongoose": "^8.4.4",
+    "mongoose": "^8.5.1",
     "dotenv": "^16.4.5"
   }
 }
