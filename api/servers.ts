@@ -56,7 +56,6 @@ const postFunction = async (req: VercelRequest, res: VercelResponse, collection)
   if(!req.body) {
     return res.status(400).json({ error: 'You must provide a body' });
   }
-  console.log(req.headers);
   if(req.headers['x-admin-token'] !== process.env.ADMIN_TOKEN) {
     return res.status(401).json({
       error: "Unauthorized",
