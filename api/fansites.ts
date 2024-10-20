@@ -1,6 +1,7 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import clientPromise from "../_utils/mongo";
 import { createHash, randomUUID } from "crypto";
+import { shuffleArray } from "../_utils/collections";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const client = await clientPromise;
@@ -19,6 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 const getFunction = async (req: VercelRequest, res: VercelResponse, collection) => {
   const limit: number = parseInt(req.query.limit as string) || 0;
   const fields: Array<string> = (req.query.fields as string) ? (req.query.fields as string).split(",") : [];
+  const isRandom: boolean = (req.query.random as string) === "true";
   let fansites = await collection.find({}).toArray()
   if(limit > 0) {
     fansites = fansites.slice(0, limit);
@@ -41,7 +43,7 @@ const getFunction = async (req: VercelRequest, res: VercelResponse, collection) 
     });
     return fansiteFields;
   });
-  return res.status(200).json(result);
+  return res.status(200).json(isRandom ? shuffleArray(result) : result);
 }
 
 const postFunction = async (req: VercelRequest, res: VercelResponse, collection) => {
