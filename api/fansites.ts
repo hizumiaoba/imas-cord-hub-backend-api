@@ -99,7 +99,7 @@ const postFunction = async (req: VercelRequest, res: VercelResponse, collection)
 export type fansiteExportType = {
   id: string,
   name: string,
-  waifu: String,
+  waifu: string,
   description: string,
   link: string,
 }

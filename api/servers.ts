@@ -110,7 +110,7 @@ export type serverExportType = {
   id: string,
   name: string,
   ip: string,
-  waifu: Array<String>,
+  waifu: Array<string>,
   description: string,
   invite: string,
   splash: string
