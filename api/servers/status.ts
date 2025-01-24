@@ -1,8 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import clientPromise from "../../_utils/mongo";
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const client = await clientPromise;
