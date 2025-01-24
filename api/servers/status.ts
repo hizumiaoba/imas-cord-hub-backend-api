@@ -1,9 +1,10 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import clientPromise from "../../_utils/mongo";
+import { Db, MongoClient } from 'mongodb';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const client = await clientPromise;
-  const db = client.db("imascordhubServer");
+  const client: MongoClient = await clientPromise;
+  const db: Db = client.db("imascordhubServer");
   const collection = db.collection("serverData");
 
   if (req.method !== 'GET') {
